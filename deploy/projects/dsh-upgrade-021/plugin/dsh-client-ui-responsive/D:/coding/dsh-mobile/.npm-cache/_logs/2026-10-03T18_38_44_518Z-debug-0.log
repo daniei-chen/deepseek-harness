@@ -1,0 +1,89 @@
+0 verbose cli /usr/local/lib/nodejs/node-v22.23.3-linux-x64/bin/node /usr/local/bin/npm
+1 info using npm@10.9.9
+2 info using node@v22.23.3
+3 silly config load:file:/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/.npmrc
+5 silly config load:file:/home/agentuser/.npmrc
+6 silly config load:file:/usr/local/lib/nodejs/node-v22.23.3-linux-x64/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:/home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/D:/coding/dsh-mobile/.npm-cache/_logs/2026-10-03T18_38_44_518Z-
+10 verbose logfile /home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/D:/coding/dsh-mobile/.npm-cache/_logs/2026-10-03T18_38_44_518Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2002518016 maxSize:500629504 maxEntrySize:250314752
+13 silly idealTree buildDeps
+14 silly fetch manifest @deepseek-ai/cordis@4.0.4
+15 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@deepseek-ai%2fcordis 643ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis set size:undefined disposed:false
+18 silly fetch manifest @deepseek-ai/cordis-plugin-include@~1.0.9
+19 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-include cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-include 178ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-include set size:undefined disposed:false
+22 silly fetch manifest @deepseek-ai/cordis-plugin-loader@~1.0.5
+23 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-loader cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/npm 1018ms
+25 http fetch GET 200 https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-loader 194ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis-plugin-loader set size:undefined disposed:false
+27 silly fetch manifest node-addon-require-builtin@^0.1.6
+28 silly packumentCache full:https://registry.npmjs.org/node-addon-require-builtin cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/node-addon-require-builtin 160ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/node-addon-require-builtin set size:undefined disposed:false
+31 silly fetch manifest @deepseek-ai/dsh-client-store@0.2.1-alpha.1
+32 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fdsh-client-store cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/@deepseek-ai%2fdsh-client-store 200ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fdsh-client-store set size:undefined disposed:false
+35 silly fetch manifest @deepseek-ai/cordis@~4.0.5-alpha.1
+36 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis cache-miss
+37 http cache https://registry.npmjs.org/@deepseek-ai%2fcordis 6ms (cache hit)
+38 silly packumentCache full:https://registry.npmjs.org/@deepseek-ai%2fcordis set size:18030 disposed:false
+39 verbose stack Error: unable to resolve dependency tree
+39 verbose stack     at #failPeerConflict (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1363:25)
+39 verbose stack     at #loadPeerSet (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1329:33)
+39 verbose stack     at async #buildDepStep (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:904:11)
+39 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:181:7)
+39 verbose stack     at async Promise.all (index 1)
+39 verbose stack     at async Arborist.reify (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:133:5)
+39 verbose stack     at async Install.exec (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/lib/commands/install.js:150:5)
+39 verbose stack     at async Npm.exec (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/lib/npm.js:207:9)
+39 verbose stack     at async module.exports (/usr/local/lib/nodejs/node-v22.23.3-linux-x64/lib/node_modules/npm/lib/cli/entry.js:74:5)
+40 error code ERESOLVE
+41 error ERESOLVE unable to resolve dependency tree
+42 error
+43 error While resolving: @dsh-android/dsh-client-ui-responsive@0.3.4-dsh021.1
+43 error Found: @deepseek-ai/cordis@4.0.4
+43 error node_modules/@deepseek-ai/cordis
+43 error   dev @deepseek-ai/cordis@"4.0.4" from the root project
+43 error   peer @deepseek-ai/cordis@"~4.0.4" from @deepseek-ai/cordis-plugin-include@1.0.9
+43 error   node_modules/@deepseek-ai/cordis-plugin-include
+43 error     peerOptional @deepseek-ai/cordis-plugin-include@"~1.0.9" from @deepseek-ai/cordis@4.0.4
+43 error   1 more (@deepseek-ai/cordis-plugin-loader)
+43 error
+43 error Could not resolve dependency:
+43 error peer @deepseek-ai/cordis@"~4.0.5-alpha.1" from @deepseek-ai/dsh-client-store@0.2.1-alpha.1
+43 error node_modules/@deepseek-ai/dsh-client-store
+43 error   dev @deepseek-ai/dsh-client-store@"0.2.1-alpha.1" from the root project
+43 error
+43 error Fix the upstream dependency conflict, or retry
+43 error this command with --force or --legacy-peer-deps
+43 error to accept an incorrect (and potentially broken) dependency resolution.
+44 error
+44 error
+44 error For a full report see:
+44 error /home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/D:/coding/dsh-mobile/.npm-cache/_logs/2026-10-03T18_38_44_518Z-eresolve-report.txt
+45 silly unfinished npm timer reify 1791052724935
+46 silly unfinished npm timer reify:loadTrees 1791052724936
+47 silly unfinished npm timer idealTree:buildDeps 1791052724955
+48 silly unfinished npm timer idealTree:#root 1791052724956
+49 verbose cwd /home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive
+50 verbose os Linux 6.8.0-124-generic
+51 verbose node v22.23.3
+52 verbose npm  v10.9.9
+53 notice
+53 notice New major version of npm available! 10.9.9 -> 12.2.0
+53 notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+53 notice To update run: npm install -g npm@12.2.0
+53 notice  { force: true, [Symbol(proc-log.meta)]: true }
+54 verbose exit 1
+55 verbose code 1
+56 error A complete log of this run can be found in: /home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/D:/coding/dsh-mobile/.npm-cache/_logs/2026-10-03T18_38_44_518Z-debug-0.log

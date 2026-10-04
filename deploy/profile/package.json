@@ -1,0 +1,21 @@
+{
+  "name": "@lightvela/deepseek-harness-web-profile",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "@cocofhu/skillhub": "0.2.16",
+    "@deepseek-ai/dsh-credentials-local": "0.2.1-alpha.1",
+    "@dsh-android/dsh-client-ui-responsive": "file:local/plugins/dsh-android-dsh-client-ui-responsive-0.3.4-dsh021.1.tgz",
+    "@xmanrui/dsh-im": "^4.34.2"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "@cocofhu/skillhub",
+        "@xmanrui/dsh-im"
+      ]
+    }
+  }
+}

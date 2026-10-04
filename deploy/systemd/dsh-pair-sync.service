@@ -1,0 +1,5 @@
+[Unit]
+Description=Refresh dsh web session for nginx injection
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/dsh-pair-sync.sh

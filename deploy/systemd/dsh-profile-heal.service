@@ -1,0 +1,5 @@
+[Unit]
+Description=Restore packer-materialized profile peer packages
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/dsh-profile-heal.sh --restart

@@ -1,0 +1,80 @@
+{
+  "browserTrustPatch": {
+    "hostname": "ins-21adb6fca6b048dfbf7f9de38930a9e9.dsh.lightvela.tech",
+    "version": 3
+  },
+  "pnpmVersion": "10.33.0",
+  "profile": {
+    "builtInBundles": [
+      "@deepseek-ai/dsh-base",
+      "@deepseek-ai/dsh-web-app"
+    ],
+    "name": "web",
+    "plugins": [
+      {
+        "id": "skillhub",
+        "integrity": "sha512-bACsKWsofDXtDW39q09fGieKvOxZghcOU7P0DXDk1udVFv+RHKePW4AGGIbGDPNuk71XrCPqMcs3VHjOM7WJcw==",
+        "package": "@cocofhu/skillhub",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/@cocofhu/skillhub/-/skillhub-0.2.16.tgz",
+        "version": "0.2.16"
+      },
+      {
+        "id": "qqbot",
+        "integrity": "sha512-MIxgktH9UW6kABn3T+FOjPELkCMRjoqJSSMcSwTw4rUKIQL975J46gtLBCDEGCgjyQltfP6XqvhDuoLDKxs9wg==",
+        "package": "deepseek-harness-qqbot",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/deepseek-harness-qqbot/-/deepseek-harness-qqbot-0.1.5.tgz",
+        "version": "0.1.5"
+      },
+      {
+        "id": "weixin",
+        "integrity": "sha512-ncoqw0F2XFoRWp+DbhvK1NtMU3TVbgD2FPyezfdpZJDvaG2SZf26givlIOV8WLTEsPhYwh3JVf7wttbwunUqjQ==",
+        "package": "deepseek-harness-weixin",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/deepseek-harness-weixin/-/deepseek-harness-weixin-0.2.5.tgz",
+        "version": "0.2.5"
+      },
+      {
+        "id": "wecom",
+        "integrity": "sha512-ot7xNq3j67mg1hjr2pv9mTh0YjxuuiqlwGE3q0I8Xw4n4XYFd1WHDaMY3sRC6TrllnRljA5csYKzmS5reBz5Nw==",
+        "package": "deepseek-harness-wecom",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/deepseek-harness-wecom/-/deepseek-harness-wecom-0.1.5.tgz",
+        "version": "0.1.5"
+      },
+      {
+        "id": "lark",
+        "integrity": "sha512-GwXIEa5GRWXdNfDjRiiWpyKyAsQCseluOFo5aq2O6wEpWeY8iXnkZQjueUoFln+X0iolcN/KDgDDhW4zeyr6Kw==",
+        "package": "deepseek-harness-lark",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/deepseek-harness-lark/-/deepseek-harness-lark-0.1.5.tgz",
+        "version": "0.1.5"
+      },
+      {
+        "id": "dingtalk",
+        "integrity": "sha512-Fiq0ANkQZr/nbeTarveICMr+Dcv/rSKMlWPopqZsWLhU2bq43dGyKpWye4S4EMOC4XvNUcG61JuRao1ZSMc5/Q==",
+        "package": "deepseek-harness-dingtalk",
+        "requested": "latest",
+        "source": "npm",
+        "tarball": "https://registry.npmjs.org/deepseek-harness-dingtalk/-/deepseek-harness-dingtalk-0.1.5.tgz",
+        "version": "0.1.5"
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-03T05:03:53.631498Z",
+  "runtime": {
+    "integrity": "sha512-EAJ3gPNcVt/uv8X19PMm9NkVhWgT7xXNMk0UKCVm+IQ5rpSQOcsMUa0HWlnYYVybKMsccjcRB21vVVsaXQ6IdA==",
+    "package": "@deepseek-ai/dsh",
+    "requested": "0.2.1-alpha.1",
+    "tarball": "https://registry.npmjs.org/@deepseek-ai/dsh/-/dsh-0.2.0-rc.2.tgz",
+    "version": "0.2.1-alpha.1"
+  },
+  "schemaVersion": 3,
+  "snapshotId": "0.2.0-rc.2-da8e5035082a"
+}

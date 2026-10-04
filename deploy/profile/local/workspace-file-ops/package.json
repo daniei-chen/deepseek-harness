@@ -1,0 +1,8 @@
+{
+  "name": "dsh-local-workspace-file-ops",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "description": "Local DSH host plugin: download/delete operations for the right Sidebar's workspace file tree."
+}

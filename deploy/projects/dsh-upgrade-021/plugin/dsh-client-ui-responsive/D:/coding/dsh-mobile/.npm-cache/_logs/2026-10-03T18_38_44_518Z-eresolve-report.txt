@@ -1,0 +1,27 @@
+'Log files:
+/home/agentuser/DeepSeek 2/dsh-upgrade-021/plugin/dsh-client-ui-responsive/D:/coding/dsh-mobile/.npm-cache/_logs/2026-10-03T18_38_44_518Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: @dsh-android/dsh-client-ui-responsive@0.3.4-dsh021.1
+Found: @deepseek-ai/cordis@4.0.4
+node_modules/@deepseek-ai/cordis
+  dev @deepseek-ai/cordis@"4.0.4" from the root project
+  peer @deepseek-ai/cordis@"~4.0.4" from @deepseek-ai/cordis-plugin-include@1.0.9
+  node_modules/@deepseek-ai/cordis-plugin-include
+    peerOptional @deepseek-ai/cordis-plugin-include@"~1.0.9" from @deepseek-ai/cordis@4.0.4
+  peer @deepseek-ai/cordis@"~4.0.4" from @deepseek-ai/cordis-plugin-loader@1.0.5
+  node_modules/@deepseek-ai/cordis-plugin-loader
+    peerOptional @deepseek-ai/cordis-plugin-loader@"~1.0.5" from @deepseek-ai/cordis@4.0.4
+    peer @deepseek-ai/cordis-plugin-loader@"~1.0.5" from @deepseek-ai/cordis-plugin-include@1.0.9
+    node_modules/@deepseek-ai/cordis-plugin-include
+      peerOptional @deepseek-ai/cordis-plugin-include@"~1.0.9" from @deepseek-ai/cordis@4.0.4
+
+Could not resolve dependency:
+peer @deepseek-ai/cordis@"~4.0.5-alpha.1" from @deepseek-ai/dsh-client-store@0.2.1-alpha.1
+node_modules/@deepseek-ai/dsh-client-store
+  dev @deepseek-ai/dsh-client-store@"0.2.1-alpha.1" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

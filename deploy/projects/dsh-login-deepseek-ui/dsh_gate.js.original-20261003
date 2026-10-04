@@ -1,0 +1,27 @@
+const crypto = require("crypto");
+const SECRET = "__GATE_SECRET__";
+const SALT = "__GATE_SALT__";
+const PHASH = "__GATE_PHASH__";
+function sha(s) { return crypto.createHash("sha256").update(s).digest("hex"); }
+function gate(r) {
+    if (r.variables.cookie_dsh_gate === SECRET) { r.return(204); }
+    else { r.return(401, "login required"); }
+}
+function login(r) {
+    if (r.method === "GET") {
+        r.headersOut["Content-Type"] = "text/html; charset=utf-8";
+        r.return(200, '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>dsh</title><style>body{font-family:system-ui;display:flex;justify-content:center;align-items:flex-start;padding-top:18vh;background:#0f1115;color:#e8e8ea;margin:0}form{background:#1a1d24;padding:2rem 2.4rem;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.4)}input{display:block;width:240px;margin:1rem 0;padding:.6rem .8rem;border-radius:8px;border:1px solid #333;font-size:1rem;background:#0f1115;color:#e8e8ea}button{width:100%;padding:.6rem;border:0;border-radius:8px;background:#3b82f6;color:#fff;font-size:1rem;cursor:pointer;margin-top:.4rem}</style></head><body><form method="POST" action="/dsh-login"><b>dsh 访问口令</b><input type="password" name="p" autofocus autocomplete="current-password"><button>进入</button></form></body></html>');
+        return;
+    }
+    var body = r.requestText !== undefined ? String(r.requestText) : (r.requestBuffer ? r.requestBuffer.toString() : "");
+    var m = body.match(/(?:^|&)p=([^&]*)/);
+    var p = m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+    if (sha(SALT + p) === PHASH) {
+        r.headersOut["Set-Cookie"] = "dsh_gate=" + SECRET + "; Max-Age=31536000; Secure; HttpOnly; Path=/; SameSite=Strict";
+        r.return(303, "/");
+    } else {
+        r.headersOut["Content-Type"] = "text/plain; charset=utf-8";
+        r.return(403, "密码错误");
+    }
+}
+export default { gate, login };

@@ -1,0 +1,27 @@
+[Unit]
+Description=LightVela DeepSeek Harness WebUI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agentuser
+Group=agentuser
+Environment=HOME=/home/agentuser
+Environment=DSH_HOME=/home/agentuser/.dsh
+Environment=PATH=/opt/lightvela/dsh/current/node_modules/.bin:/opt/lightvela/dsh/tooling/pnpm-10.33.0/node_modules/.bin:/usr/local/bin:/usr/bin:/bin
+Environment=GIT_CONFIG_COUNT=2
+Environment=GIT_CONFIG_KEY_0=url.https://github.com/.insteadOf
+Environment=GIT_CONFIG_VALUE_0=git@github.com:
+Environment=GIT_CONFIG_KEY_1=url.https://github.com/.insteadOf
+Environment=GIT_CONFIG_VALUE_1=ssh://git@github.com/
+WorkingDirectory=/home/agentuser
+ExecStart=/opt/lightvela/dsh/current/node_modules/.bin/dsh web --no-open --host 127.0.0.1 --port 3080
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+KillMode=mixed
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

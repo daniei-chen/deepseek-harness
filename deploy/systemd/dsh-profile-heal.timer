@@ -1,0 +1,7 @@
+[Unit]
+Description=Watchdog: heal dsh profile peer packages
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+[Install]
+WantedBy=timers.target

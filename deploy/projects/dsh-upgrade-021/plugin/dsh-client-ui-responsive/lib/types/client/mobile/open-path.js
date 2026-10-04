@@ -1,0 +1,32 @@
+/**
+ * Whether the running host can raise the native chooser.
+ * @returns true when the shell injected the method.
+ */
+export function chooserAvailable() {
+    return typeof window.androidBridge?.openPathChooser === 'function';
+}
+/**
+ * Ask the shell to open a path through the system chooser.
+ * @param path - absolute device path.
+ * @param mode - `folder` targets file managers on the directory, `view` on the file.
+ * @returns the shell's outcome; `{ ok: false, reason: 'unavailable' }` without a shell.
+ */
+export function openPathChooser(path, mode = 'view') {
+    const bridge = window.androidBridge;
+    if (typeof bridge?.openPathChooser !== 'function')
+        return { ok: false, reason: 'unavailable' };
+    try {
+        const raw = bridge.openPathChooser(path, mode);
+        if (typeof raw !== 'string' || raw === '')
+            return { ok: false, reason: 'empty-answer' };
+        const answer = JSON.parse(raw);
+        if (answer.ok === true)
+            return { ok: true };
+        return { ok: false, reason: typeof answer.reason === 'string' ? answer.reason : 'refused' };
+    }
+    catch (error) {
+        // A bridge that threw (or answered non-JSON) is a shell-side failure, not a
+        // user-level refusal; both surface through the same dialog copy.
+        return { ok: false, reason: error instanceof Error ? error.message : 'bridge-error' };
+    }
+}
